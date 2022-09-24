@@ -7,13 +7,39 @@
     tools:context=".ui.activity.FormularioProdutoActivity">
 
 
-
-
-
-
-
-    <TextView
-        android:layout_width="match_parent"
+    <EditText android:id="@+id/nome"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Testando Formulário" />
+        android:hint=" Nome do Produto"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText android:id="@+id/descricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Descrição do Produto"
+        app:layout_constraintEnd_toEndOf="@id/nome"
+        app:layout_constraintStart_toStartOf="@+id/nome"
+        app:layout_constraintTop_toBottomOf="@+id/nome"/>
+
+    <EditText android:id="@+id/valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint=" Valor do Produto "
+        app:layout_constraintEnd_toEndOf="@+id/nome"
+        app:layout_constraintStart_toStartOf="@+id/nome"
+        app:layout_constraintTop_toBottomOf="@+id/descricao"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
