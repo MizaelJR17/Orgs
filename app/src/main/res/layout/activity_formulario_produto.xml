@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.activity.FormularioProdutoActivity">
 
 
@@ -12,6 +17,7 @@
         android:layout_height="wrap_content"
         android:hint=" Nome do Produto"
         android:layout_margin="16dp"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -20,6 +26,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Descrição do Produto"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="@id/nome"
         app:layout_constraintStart_toStartOf="@+id/nome"
         app:layout_constraintTop_toBottomOf="@+id/nome"/>
@@ -28,18 +35,22 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint=" Valor do Produto "
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="@+id/nome"
         app:layout_constraintStart_toStartOf="@+id/nome"
         app:layout_constraintTop_toBottomOf="@+id/descricao"
         />
 
-    <Button
+    <Button android:id="@+id/botao_salvar"
         android:layout_width="0dp"
         android:layout_margin="16dp"
         android:layout_height="wrap_content"
         android:text="Salvar"
+        app:layout_constraintVertical_bias="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valor"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
