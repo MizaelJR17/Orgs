@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <EditText android:id="@+id/descricao"
+            <EditText android:id="@+id/descricao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Descrição do Produto"
