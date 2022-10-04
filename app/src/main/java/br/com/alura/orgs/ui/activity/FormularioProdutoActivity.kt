@@ -47,8 +47,9 @@ class FormularioProdutoActivity : AppCompatActivity(R.layout.activity_formulario
 
             Log.i("Formulario Produto", "onCreate${dao.buscaTodos()}")
 
-             }
+            finish()
 
+        }
     }
 
 }
